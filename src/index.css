@@ -7,10 +7,41 @@
 html,
 body {
   height: 100vh;
+  background: fixed;
+  background-image: url("bg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
-body {
-  background-color: whitesmoke;
+
+.app-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 50px;
 }
-.card {
-  max-height: 100px;
+.header-text {
+  font-size: 50px;
+  color: white;
+}
+.news-logo {
+  width: 450px;
+}
+.intro-cards {
+  max-width: 95%;
+  margin: auto;
+  text-align: center;
+  height: 350px;
+}
+.info-card-text {
+  padding: 20px;
+  color: white;
+}
+.news-cards {
+  max-width: 90%;
+  margin: auto;
+}
+.card-btn a {
+  text-decoration: none;
 }

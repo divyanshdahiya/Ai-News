@@ -1,4 +1,5 @@
 import React from "react";
+import "../index.css";
 import {
   Card,
   CardContent,
@@ -15,9 +16,10 @@ const NewsCard = ({
 }) => {
   console.log(i);
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardActionArea clasName="card">
+    <Card sx={{ maxWidth: 345 }} style={{ cursor: "default" }}>
+      <CardActionArea clasName="card" style={{ cursor: "default" }}>
         <CardMedia
+          style={{ cursor: "default" }}
           component="img"
           image={
             urlToImage ||
@@ -25,7 +27,7 @@ const NewsCard = ({
           }
         />
 
-        <CardContent>
+        <CardContent style={{ cursor: "default" }}>
           <Typography gutterBottom variant="body2" component="h2">
             {new Date(publishedAt).toDateString()}
           </Typography>
@@ -41,12 +43,14 @@ const NewsCard = ({
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Show More
-        </Button>
         <Typography variant="h5" color="textSecondary">
           {i + 1}
         </Typography>
+        <Button size="small" color="primary" className="card-btn">
+          <a href={url} target="blank">
+            Show More
+          </a>
+        </Button>
       </CardActions>
     </Card>
   );

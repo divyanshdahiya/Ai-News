@@ -6,7 +6,9 @@ import NewsLogo from "./news-logo.png";
 
 function App() {
   const [newsArticles, setNewsArticles] = useState([]);
-
+  console.log(
+    process.env.React_App_ALAN_KEY + "this is the keyyyyyyyyyyyyyyyyyyyyyy"
+  );
   useEffect(() => {
     alanBtn({
       key: process.env.React_App_ALAN_KEY,
